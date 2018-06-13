@@ -1,0 +1,26 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+</head>
+<body>
+    <table id="fancytable" class="Display">
+        <thead>
+            <th>Title</th>
+            <th>Keyword</th>
+        </thead>
+        <tbody>
+            {{ range $key, $value := .News }}
+            <tr>
+                <td><a href="{{$value.Location}}" target="_blank">{{$key}}</a> </td>
+                <td>{{$value.Keyword }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function(){
+            $('#fancytable').DataTable();
+        })
+    </script>
+</body>
