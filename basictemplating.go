@@ -28,11 +28,11 @@ type NewsAggPage struct {
 	News  map[string]NewsMap
 }
 
-func main() {
-	http.HandleFunc("/", index_Handler)
-	http.HandleFunc("/agg/", newsAggHandler)
-	http.ListenAndServe(":8000", nil)
-}
+// func main() {
+// 	http.HandleFunc("/", index_Handler)
+// 	http.HandleFunc("/agg/", newsAggHandler)
+// 	http.ListenAndServe(":8000", nil)
+// }
 
 func index_Handler(rw http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(rw, "<h1>Index Page</h1>")
