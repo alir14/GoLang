@@ -1,25 +1,30 @@
 package main
 
-import (
-	"fmt"
-)
+// import (
+// 	"fmt"
+// 	"sync"
+// )
 
-func main() {
-	fooVal := make(chan int)
+// var waitGroup sync.WaitGroup
 
-	go foo(fooVal, 5)
-	go foo(fooVal, 3)
+// func main() {
+// 	fooVal := make(chan int, 10)
 
-	// v1 := <-fooVal
-	// v2 := <-fooVal
+// 	for i := 0; i < 10; i++ {
+// 		waitGroup.Add(1)
+// 		go foo(fooVal, i)
+// 	}
 
-	v1, v2 := <-fooVal, <-fooVal
+// 	waitGroup.Wait()
+// 	close(fooVal)
 
-	fmt.Println(v1)
-	fmt.Println(v2)
+// 	for item := range fooVal {
+// 		fmt.Println(item)
+// 	}
 
-}
+// }
 
-func foo(c chan int, someValue int) {
-	c <- someValue * 5
-}
+// func foo(c chan int, someValue int) {
+// 	defer waitGroup.Done()
+// 	c <- someValue * 5
+// }
