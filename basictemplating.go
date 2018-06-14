@@ -51,18 +51,18 @@ func newsRoutine(channel chan News, Location string) {
 	channel <- news
 }
 
-func newsAggHandler(rw http.ResponseWriter, r *http.Request) {
-
-	var siteMap SitemapIndex
-	news_map := make(map[string]NewsMap)
-
+func (siteMap *SitemapIndex) getNewsFeed() {
 	resp, _ := http.Get("https://www.washingtonpost.com/news-sitemap-index.xml")
 	bytes, _ := ioutil.ReadAll(resp.Body)
 	xml.Unmarshal(bytes, &siteMap)
 	resp.Body.Close()
+}
 
+func newsAggHandler(rw http.ResponseWriter, r *http.Request) {
+	var siteMap SitemapIndex
+	news_map := make(map[string]NewsMap)
+	siteMap.getNewsFeed()
 	queue := make(chan News, 30)
-
 	for _, Location := range siteMap.Locations {
 		waitGroup.Add(1)
 		go newsRoutine(queue, Location)
