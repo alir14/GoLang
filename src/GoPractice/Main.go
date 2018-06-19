@@ -17,16 +17,46 @@ type MyPrinter func(string)
 
 func main() {
 
+	// var prefixMap map[string]string
+	// prefixMap = make(map[string]string)
+	// OR
+	// prefixMap := make(map[string]string)
+
+	// prefixMap["Ali"] = "Agha"
+	// prefixMap["Jafar"] = "Doctor"
+	// prefixMap["Ghasem"] = "Mohandes"
+
+	// OR
+
+	prefixMap := map[string]string{
+		"Ali":     "Agha",
+		"Jafar":   "Doctor",
+		"Ghasem":  "Mohandes",
+		"Nazanin": "Khanom",
+	}
+
+	delete(prefixMap, "Nazanin")
+
 	slice := []Salutaion{
 		{"Ali", "Hi"},
 		{"Jafar", "Ho"},
 		{"Ghasem", "HU"},
+		{"Nazanin", "He"},
 	}
 
 	for index, item := range slice {
-		fmt.Println(index)
+
+		if value, exists := prefixMap[item.name]; exists {
+			item.grreting = value
+		} else {
+			item.grreting = "Dude"
+		}
+
+		fmt.Print(index, ") ")
+		item.grreting = prefixMap[item.name]
 		Greeting(item, CreatePrintFunction("!!!"))
 	}
+
 	// var salutation = Salutaion{"Ali", "Hello"}
 	// Greeting(salutation, CreatePrintFunction("!!!"))
 }
