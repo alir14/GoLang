@@ -86,3 +86,63 @@ func CreateMessage(name string, greeting ...string) (message string, alternative
 	alternative = "Hey! " + name
 	return
 }
+	// var prefixMap map[string]string
+	// prefixMap = make(map[string]string)
+	// OR
+	// prefixMap := make(map[string]string)
+
+	// prefixMap["Ali"] = "Agha"
+	// prefixMap["Jafar"] = "Doctor"
+	// prefixMap["Ghasem"] = "Mohandes"
+	// var prefixMap map[string]string
+	// prefixMap = make(map[string]string)
+	// OR
+	// prefixMap := make(map[string]string)
+
+	// prefixMap["Ali"] = "Agha"
+	// prefixMap["Jafar"] = "Doctor"
+	// prefixMap["Ghasem"] = "Mohandes"
+	// var prefixMap map[string]string
+	// prefixMap = make(map[string]string)
+	// OR
+	// prefixMap := make(map[string]string)
+
+// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }// func Print(input string) {
+// 	fmt.Print(input)
+// }
+
+	// prefixMap["Ali"] = "Agha"
+	// prefixMap["Jafar"] = "Doctor"
+	// prefixMap["Ghasem"] = "Mohandes"
+	// var prefixMap map[string]string
+	// prefixMap = make(map[string]string)
+	// OR
+	// prefixMap := make(map[string]string)
+
+	// prefixMap["Ali"] = "Agha"
+	// prefixMap["Jafar"] = "Doctor"
+	// prefixMap["Ghasem"] = "Mohandes"
+	// var prefixMap map[string]string
+	// prefixMap = make(map[string]string)
+	// OR
+	// prefixMap := make(map[string]string)
+
+	// prefixMap["Ali"] = "Agha"
+	// prefixMap["Jafar"] = "Doctor"
+	// prefixMap["Ghasem"] = "Mohandes"
