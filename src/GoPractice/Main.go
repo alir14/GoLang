@@ -86,3 +86,16 @@ func CreateMessage(name string, greeting ...string) (message string, alternative
 	alternative = "Hey! " + name
 	return
 }
+
+// func PrintCustom(input string, custom string) {
+// 	fmt.Println(input + custom)
+// }
+// func PrintCustom(input string, custom string) {
+// 	fmt.Println(input + custom)
+// }
+// func PrintCustom(input string, custom string) {
+// 	fmt.Println(input + custom)
+// }
+// func PrintCustom(input string, custom string) {
+// 	fmt.Println(input + custom)
+// }
