@@ -1,5 +1,5 @@
 # GoLang
-Go Lang, Such a beautiful language.
+Go Lang, what a beautiful language.
 
 Personally, I am interested in low level languages like C++. However, I did not have a chance to work on too many projects with such a language since the need of job market is more tend to Web applications. I have worked in many web projects and used different technologies such as.Net MVC, PHP, HHVM, NodeJS and etc, but I never satisfied with those technologies until I started to look at GoLang.
 A powerful, simple and fast language that has C++ features and gives ability to have concurrent functionality.
